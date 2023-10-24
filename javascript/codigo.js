@@ -1,11 +1,11 @@
-alert("Elegí tu tipo de Pokemon a generar");
+alert("Elegi tu tipo de Pokemon a generar");
 alert("1.Agua\n\n2.Fuego\n\n3.Planta");
 
 let opcion = prompt("Elegir").toLowerCase();
 let continuar = true;
 
 function pokeAgua() {
-    var aleatorio = Math.floor(Math.random() * 5);
+    let aleatorio = Math.floor(Math.random() * 5);
 
     let agua1 = "Blastoise";
     let agua2 = "Vaporeon";
@@ -27,11 +27,11 @@ function pokeAgua() {
         nombre = agua5
     }
 
-    alert("Te tocó el pokemon de agua: " + nombre);
+    alert("Te toco el pokemon de agua: " + nombre);
 }
 
 function pokeFuego() {
-    var aleatorio = Math.floor(Math.random() * 5);
+    let aleatorio = Math.floor(Math.random() * 5);
 
     let fuego1 = "Arcanine";
     let fuego2 = "Rapidash";
@@ -53,11 +53,11 @@ function pokeFuego() {
         nombre = fuego5
     }
 
-    alert("Te tocó el pokemon de fuego: " + nombre);
+    alert("Te toco el pokemon de fuego: " + nombre);
 }
 
 function pokePlanta() {
-    var aleatorio = Math.floor(Math.random() * 5);
+    let aleatorio = Math.floor(Math.random() * 5);
 
     let planta1 = "Serperior";
     let planta2 = "Cacnea";
@@ -79,7 +79,7 @@ function pokePlanta() {
         nombre = planta5
     }
 
-    alert("Te tocó el pokemon de planta: " + nombre);
+    alert("Te toco el pokemon de planta: " + nombre);
 }
 
 switch (opcion) {
@@ -122,6 +122,6 @@ switch (opcion) {
         } while (continuar == true);
         break;
 
-    default: alert("mmm eso no es un tipo de pokemon")
+    default: alert("mmm eso no es un tipo de pokemon");
         break;
 }
