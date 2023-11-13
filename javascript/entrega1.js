@@ -1,5 +1,5 @@
-alert("Elegi tu tipo de Pokemon a generar");
-alert("1.Agua\n\n2.Fuego\n\n3.Planta");
+alert("Elegi tu Pokemon inicial: ");
+alert("1.Bulbasaur\n\n2.Charmander\n\n3.Squirtle");
 
 let opcion = prompt("Elegir").toLowerCase();
 let continuar = true;
