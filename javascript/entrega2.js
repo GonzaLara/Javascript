@@ -27,6 +27,8 @@ const listaPokemon = [
     new Poke("Giratina", "50/100", "Fantasma/Dragon", "Fantasma/Siniestro/Hada/Hielo/Dragon"),
     new Poke("Raichu", "39/100", "Electrico", "Tierra"),
     new Poke("Ferropalmas", "71/100", "Lucha/Electrico", "Psiquico/Hada/Tierra"),
+    new Poke("Genesect", "64/100", "Bicho/Acero", "Fuego(*4)"),
+    new Poke("Articuno", "45/100", "Hielo/Volador", "Acero/Fuego/Electrico/Roca(*4)"),
 ];
 /* */
 
