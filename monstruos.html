@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monstruos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <a href="indice.html" class="volver">VOLVER</a>
+    </header>
+    <main>
+        <section id="contenedor">
+            <div class="caja">
+                <img src="imagenes/velocidrome.png" alt="">
+                <h1>Velocidrome</h1>
+                <button onclick="Overlay(1)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/malfestio.webp" class="malfestio" alt="">
+                <h1>Malfestio</h1>
+                <button onclick="Overlay(2)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/ceanataur.webp" class="ceanataur" alt="">
+                <h1>Shogun Ceanataur</h1>
+                <button onclick="Overlay(3)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/lagiacrus.webp" class="lagiacrus" alt="">
+                <h1>Lagiacrus</h1>
+                <button onclick="Overlay(4)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/rathalos.webp" alt="">
+                <h1>Rathalos</h1>
+                <button onclick="Overlay(5)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/brachydios.webp" class="brachydios" alt="">
+                <h1>Brachydios</h1>
+                <button onclick="Overlay(6)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/gravios.webp" class="gravios" alt="">
+                <h1>Gravios</h1>
+                <button onclick="Overlay(7)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/bazelgeuse.webp" alt="">
+                <h1>Bazelgeuse</h1>
+                <button onclick="Overlay(8)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <div class="caja">
+                <img src="imagenes/gore_magala.png" class="gore" alt="">
+                <h1>Gore Magala</h1>
+                <button onclick="Overlay(9)" class="buton">Informacion Monstruo</button>
+                <button class="buton">Ver Contrato</button>
+            </div>
+
+            <!-- Overlay -->
+            <div class="overlay" id="overlay" onclick="Overlay()">
+                <div class="modal-content" id="modalContent">
+                    <p id="nombreMonstruo" class="parrafo2"></p>
+                    <p id="habitatMonstruo" class="parrafo2"></p>
+                    <p id="tipoMonstruo" class="parrafo2"></p>
+                    <p id="descripcionMonstruo" class="parrafo2"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+    <script src="https://kit.fontawesome.com/faa261971d.js" crossorigin="anonymous"></script>
+    <script src="javascript/codigo.js"></script>
+</body>
+
+</html>
