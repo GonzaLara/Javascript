@@ -61,7 +61,7 @@ const limiteObjetos = {
     'Bolas de Pintura': 99,
     'Trampa Electrica': 1,
     'Trampa Enredaderas': 1,
-    'Bolas Tranquil.': 8,
+    'Bomba Tranquil.': 8,
     'Bomba Flash': 5,
     'Bomba Sonica': 5,
     'Bebida Caliente': 5,

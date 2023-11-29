@@ -21,7 +21,8 @@ const monstruos = [
     new Monstruo("Gore Magala", "Estepa Otoñal/Zona Sagrada/Vergel Eterno", "???", "El Gore Magala tiene el cuerpo típico de un dragón. Está cubierto de escamas de color negro. Sus alas son grandes, armadas con zarpas de color rojo, que suelen mantenerse plegadas simulando una capa. Carece de ojos.Es un monstruo agresivo que puede llegar a matar a grandes wyverns, otros monstruos intentan evitarlo debido al virus Colera que produce.", "Cuando se enfada 2 antenas se desplegaran de su cabeza, su cuerpo se volvera mas brillante y lanzara sus escamas al cielo cubriendolo de un color oscuro. En este punto entrar en el estado Colerico.") ];
 
 class Contrato {
-    constructor(objetivo, recompensa, costo, ubicacion) {
+    constructor(imagen,objetivo, recompensa, costo, ubicacion) {
+        this.imagen = imagen;
         this.objetivo = objetivo;
         this.recompensa = recompensa;
         this.costo = costo;
@@ -30,15 +31,15 @@ class Contrato {
 }
 
 const contratos = [
-    new Contrato("Caza 1 Velocidrome", "1000p", "100p","Jungla"),
-    new Contrato("Caza 2 Malfestio", "2500p","250p" ,"Selva Jurasica"),
-    new Contrato("Captura 1 Shogun Ceanataur", "2600p", "260p","Bosque Inundado"),
-    new Contrato("Caza 1 Lagiacrus", "3100p", "310p","Picos"),
-    new Contrato("Caza 1 Rathalos y 1 Velocidrome", "5000p","500p", "Estepa Otoñal"),
-    new Contrato("Captura 2 Brachydios", "8250p","825p", "Volcan"),
-    new Contrato("Caza 1 Gravios", "5500p", "550p", "Volcan"),
-    new Contrato("Captura 1 Bazelgeuse y caza 2 Lagiacrus", "10000p", "1000p", "Lecho de los Ancianos"),
-    new Contrato("Caza 1 Gore Magala", "8500p", "850p", "Vergel Eterno") ];
+    new Contrato("../imagenes/iconoVelocidrome.png","Caza 1 Velocidrome", "1000p", "100p","Jungla"),
+    new Contrato("../imagenes/iconoMalfestio.png","Caza 2 Malfestio", "2500p","250p" ,"Selva Jurasica"),
+    new Contrato("../imagenes/iconoCeanataur.png","Captura 1 Shogun Ceanataur", "2600p", "260p","Bosque Inundado"),
+    new Contrato("../imagenes/iconoLagiacrus.png" ,"Caza 1 Lagiacrus", "3100p", "310p","Picos"),
+    new Contrato("../imagenes/iconoRathalos.png" ,"Caza 1 Rathalos y 1 Velocidrome", "5000p","500p", "Estepa Otoñal"),
+    new Contrato("../imagenes/iconoBrachydios.png" ,"Captura 2 Brachydios", "8250p","825p", "Volcan"),
+    new Contrato("../imagenes/iconoGravios.png" ,"Caza 1 Gravios", "5500p", "550p", "Volcan"),
+    new Contrato("../imagenes/iconoBazelgeuse.png" ,"Captura 1 Bazelgeuse y caza 2 Lagiacrus", "10000p", "1000p", "Lecho de los Ancianos"),
+    new Contrato("../imagenes/iconoGore.png" ,"Caza 1 Gore Magala", "8500p", "850p", "Vergel Eterno") ];
 
 let overlayAbierto = false;
 
@@ -85,11 +86,13 @@ function Overlay2(contrato) {
     } else {
         overlayAbierto = true;
         
+        const imagenElemento = document.getElementById('imagenMision');
         const objetivoElemento = document.getElementById('objetivoMision');
         const recompensaElemento = document.getElementById('recompensaMision');
         const costoElemento = document.getElementById('costoMision');
         const ubicacionElemento = document.getElementById('ubicacionMision');
 
+        imagenElemento.src = contratos[contrato - 1].imagen;
         objetivoElemento.textContent = "Objetivo: " + contratos[contrato - 1].objetivo;
         recompensaElemento.textContent = "Recompensa: " + contratos[contrato - 1].recompensa;
         costoElemento.textContent = "Costo Contrato: " + contratos[contrato - 1].costo;
