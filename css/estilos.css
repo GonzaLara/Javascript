@@ -1,3 +1,4 @@
+/* Organizar esto */
 * {
     margin: 0;
     padding: 0;
@@ -93,6 +94,18 @@ header a:hover {
     background-color: red;
 }
 
+.color img{
+    filter: grayscale(100%);
+    transition: all 1s ease;
+}
+    
+.color img:hover{
+    filter: grayscale(0%);
+    filter: gray;
+    filter: none;
+    transition: 1s ease;
+    transform: scale(1.2);
+}
 
 img {
     max-width: 100%;
@@ -260,4 +273,8 @@ h2 {
 
 .alinear2 {
     padding-top: 35px;
+}
+
+#iconoMonstruo {
+    margin-bottom: 35px;
 }
