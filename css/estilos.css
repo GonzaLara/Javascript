@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url("../imagenes/BosquePrimigenio.jpg");
+body, #indice{
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,6 +12,30 @@ body {
     height: 100vh;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+body {
+    background-image: url("../imagenes/BosquePrimigenio.jpg");
+}
+
+
+#indice {
+    background-image: url("../imagenes/alerta.webp");
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    line-height: 60px; 
+}
+header a {
+    
+    padding: 0 20px;
+}
+
+header a:hover {
+    background-color: grey;
 }
 
 #seccion {
@@ -126,7 +149,7 @@ footer, header {
     height: 65px;
 }
 
-#overlay {
+#overlay, #overlay2 {
     display: none;
     position: fixed;
     top: 0;
@@ -139,14 +162,14 @@ footer, header {
     transition: opacity 0.5s;
     z-index: 10;
 }
-  
-#overlay.active {
+
+#overlay.active, #overlay2.active {
     opacity: 1;
     pointer-events: all;
 }
 
-#overlay p {
-    padding: 30px 0;
+#overlay p, #overlay2 p  {
+    padding: 15px 0;
 }
 
 .modal-content {
@@ -157,7 +180,84 @@ footer, header {
     padding: 20px;
     border-radius: 20px;
     text-align: center;
-    max-width: 50%;
-    max-height: 80%; 
+    max-width: 53%;
+    max-height: 90%; 
     overflow-y: auto; 
+}
+
+
+/* Equipo */
+#contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 30px 100px;
+    gap: 25px;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.cont0, .cont, .cont2 {
+    border: 3px solid black;
+}
+
+.cont0 {
+    grid-row: 1;
+    grid-column: 1/4;
+    background-color: rgba(255, 255, 255, 0.479);
+    vertical-align: middle;
+    line-height: 45px; 
+    height: 50px;
+}
+
+.cont2 {
+    grid-row: 1 / 8;
+    grid-column: 4;
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+.cont {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+.cont a {
+    text-decoration: none;
+}
+
+.items{
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.letras {
+    vertical-align: middle;
+    line-height: 80px; 
+    padding: 0 30px;
+    font-size: 2rem;
+}
+
+.quitar {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.agregar {
+    color: green;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.alinear {
+    padding-top: 20px;
+}
+
+.alinear2 {
+    padding-top: 35px;
 }
