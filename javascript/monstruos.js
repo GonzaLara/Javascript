@@ -31,15 +31,15 @@ class Contrato {
 }
 
 const contratos = [
-    new Contrato("../imagenes/iconoVelocidrome.png","Caza 1 Velocidrome", "1000p", "100p","Jungla"),
-    new Contrato("../imagenes/iconoMalfestio.png","Caza 2 Malfestio", "2500p","250p" ,"Selva Jurasica"),
-    new Contrato("../imagenes/iconoCeanataur.png","Captura 1 Shogun Ceanataur", "2600p", "260p","Bosque Inundado"),
-    new Contrato("../imagenes/iconoLagiacrus.png" ,"Caza 1 Lagiacrus", "3100p", "310p","Picos"),
-    new Contrato("../imagenes/iconoRathalos.png" ,"Caza 1 Rathalos y 1 Velocidrome", "5000p","500p", "Estepa Otoñal"),
-    new Contrato("../imagenes/iconoBrachydios.png" ,"Captura 2 Brachydios", "8250p","825p", "Volcan"),
-    new Contrato("../imagenes/iconoGravios.png" ,"Caza 1 Gravios", "5500p", "550p", "Volcan"),
-    new Contrato("../imagenes/iconoBazelgeuse.png" ,"Captura 1 Bazelgeuse y caza 2 Lagiacrus", "10000p", "1000p", "Lecho de los Ancianos"),
-    new Contrato("../imagenes/iconoGore.png" ,"Caza 1 Gore Magala", "8500p", "850p", "Vergel Eterno") ];
+    new Contrato("./imagenes/iconoVelocidrome.png","Caza 1 Velocidrome", "1000p", "100p","Jungla"),
+    new Contrato("./imagenes/iconoMalfestio.png","Caza 2 Malfestio", "2500p","250p" ,"Selva Jurasica"),
+    new Contrato("./imagenes/iconoCeanataur.png","Captura 1 Shogun Ceanataur", "2600p", "260p","Bosque Inundado"),
+    new Contrato("./imagenes/iconoLagiacrus.png" ,"Caza 1 Lagiacrus", "3100p", "310p","Picos"),
+    new Contrato("./imagenes/iconoRathalos.png" ,"Caza 1 Rathalos y 1 Velocidrome", "5000p","500p", "Estepa Otoñal"),
+    new Contrato("./imagenes/iconoBrachydios.png" ,"Captura 2 Brachydios", "8250p","825p", "Volcan"),
+    new Contrato("./imagenes/iconoGravios.png" ,"Caza 1 Gravios", "5500p", "550p", "Volcan"),
+    new Contrato("./imagenes/iconoBazelgeuse.png" ,"Captura 1 Bazelgeuse y caza 2 Lagiacrus", "10000p", "1000p", "Lecho de los Ancianos"),
+    new Contrato("./imagenes/iconoGore.png" ,"Caza 1 Gore Magala", "8500p", "850p", "Vergel Eterno") ];
 
 let overlayAbierto = false;
 
