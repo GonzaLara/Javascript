@@ -172,7 +172,7 @@ footer, header {
     padding: 15px 0;
 }
 
-.modal-content {
+.modal {
     background-image: url("../imagenes/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
