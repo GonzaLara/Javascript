@@ -15,12 +15,12 @@ body, #indice{
 }
 
 body {
-    background-image: url("../imagenes/BosquePrimigenio.jpg");
+    background-image: url("./imagenes/BosquePrimigenio.jpg");
 }
 
 
 #indice {
-    background-image: url("../imagenes/alerta.webp");
+    background-image: url("./imagenes/alerta.webp");
 }
 
 header {
@@ -173,7 +173,7 @@ footer, header {
 }
 
 .modal-content {
-    background: url("./imagenes/background.jpg");
+    background: url("./imagenes/background.JPG");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
