@@ -333,7 +333,10 @@ tbody td {
 
 tr:nth-child(even) {
     background: #888888;
-  }
+}
+.descripcion-armas {
+    padding: 0 8px;
+}
 /*  */
 
 /* Pestaña comunidad */
@@ -395,6 +398,10 @@ input {
 .icono {
     font-size: 80px;
     margin: 30px;
+}
+
+.icono:hover {
+    filter: brightness(1.2);
 }
 
 .wasap {

@@ -51,7 +51,7 @@ const cargarArmas = async () => {
                 <div class="items weapons">
                     <img class="imagen" src="${arma.imagen}">
                     <h1>${arma.nombre}</h1>
-                    <p>${arma.descripcion}</p>
+                    <p class="descripcion-armas">${arma.descripcion}</p>
                 </div>
                 `
             });

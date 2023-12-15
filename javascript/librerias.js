@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (storedName) {
             Swal.fire({
                 title: `Que bueno volver a verte, ${storedName}`,
-                text: `Espero que estes listo para cazar monstruos`,
+                text: `Espero que estés listo para cazar monstruos`,
                 icon: 'success'
             });
             sessionStorage.setItem('mensajeMostrado', 'true');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cancelButtonText: 'Cancelar',
                 preConfirm: (nombre) => {
                     if (!nombre) {
-                        Swal.showValidationMessage('Bienvenido Cazador, decime tu nombre para registrarte');
+                        return Swal.showValidationMessage('Bienvenido Cazador, decime tu nombre para registrarte');
                     } else {
                         localStorage.setItem('nombreUsuario', nombre);
                         Swal.fire({
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
 
 // Para el carrusel con Swiper en el index
 const swiper = new Swiper('.swiper', {
