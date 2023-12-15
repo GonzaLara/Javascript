@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const mensajeMostrado = sessionStorage.getItem('mensajeMostrado');
 
     if (mensajeMostrado === null) {
-        const storedName = localStorage.getItem('nombreUsuario');
-        if (storedName) {
+        const guardarNombre = localStorage.getItem('nombreUsuario');
+        if (guardarNombre) {
             Swal.fire({
-                title: `¡Que bueno volver a verte, ${storedName}!`,
+                title: `¡Que bueno volver a verte, ${guardarNombre}!`,
                 text: 'Espero que estés listo para cazar monstruos.',
                 icon: 'success'
             });
@@ -14,17 +14,20 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             Swal.fire({
                 title: 'Bienvenido Cazador',
-                text: 'Decime tu nombre para registrarte',
+                text: 'Decime tu nombre para registrarte.',
                 input: 'text',
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
                 cancelButtonText: 'Cancelar',
-
+            }).then((resultado) => {
+                if (resultado.isConfirmed) {
+                    const userName = resultado.value;
+                    localStorage.setItem('nombreUsuario', userName);
+                }
             });
         }
     }
 });
-
 
 
 // Para el carrusel con Swiper en el index
