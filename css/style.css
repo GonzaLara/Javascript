@@ -1,0 +1,422 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Kanit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fuzzy Bubbles', 'Kanit', sans-serif, cursive;
+}
+
+:root::-webkit-scrollbar{
+    display: none;
+}
+  
+:root {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    margin: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../imagenes/fondo_pantalla.jpg");
+    filter: blur(2px);
+    background-color: purple;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+header {
+    vertical-align: middle;
+    line-height: 60px; 
+}
+
+header a {
+    padding: 0 30px;
+    
+}
+
+header a:hover {
+    background-color: grey;
+}
+
+footer, header {
+    background-color: black;
+    width: 100%;
+    height: 65px;
+}
+
+.inicio {
+    text-decoration: none;
+    color: white;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+#medio {
+    display: flex;
+    justify-content: space-between;
+}
+
+#ir {
+    display: flex;
+    justify-content: end;
+}
+
+#volver {
+    display: flex;
+    justify-content: start;
+}
+
+h1, p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#contenedor {
+    display: grid;
+    margin: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+}
+
+.color img{
+    filter: grayscale(100%);
+    transition: all 1s ease;
+}
+    
+.color img:hover{
+    filter: grayscale(0%);
+    filter: gray;
+    filter: none;
+    transition: 1s ease;
+    transform: scale(1.2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.swiper {
+    width: 550px;
+    text-align: center;
+    
+    padding: 20px;
+    .swiper-slide {
+        padding: 20px;
+    }
+}
+
+.boton {
+    display: inline;
+    width: 80%;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: red;
+}
+
+/* tamaño imagenes monstruos */
+.malfestio {
+    width: 60%;
+}
+
+.nebula {
+    width: 40%;
+}
+
+.ceanataur, .rosa {
+    width: 80%;
+}
+
+.daimyio {
+    width: 65%;
+}
+
+.lagiacrus {
+    width: 75%;
+}
+
+.marmoreo {
+    width: 87%;
+}
+
+.abismo {
+    width: 45%;
+}
+
+.rathian {
+    width: 70%;
+}
+
+.dorada{
+    width: 100%;
+}
+
+.rathalos {
+    width: 70%;
+}
+
+.celeste {
+    width: 75%;
+}
+
+.plateado {
+    width: 70%;
+}
+
+.brachydios {
+    width: 93%;
+}
+
+.gravios {
+    width: 85%;
+}
+
+.magma {
+    width: 65%;
+}
+
+.gore {
+    width: 81%;
+}
+
+.caotico {
+    width: 65%;
+}
+
+.shagaru {
+    width: 55%;
+}
+/*  */
+
+/* overlay */
+#overlay, #overlay2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    z-index: 10;
+}
+
+#overlay.active, #overlay2.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#overlay p, #overlay2 p  {
+    padding: 10px;
+}
+
+.modal {
+    background-image: url("../imagenes/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 53%;
+    max-height: 90%; 
+    overflow-y: auto; 
+}
+
+.parrafo {
+    font-weight: bolder;
+    font-size: 2rem;
+    color: black;
+}
+
+.parrafo-titulo {
+    font-size: 3rem;
+}
+
+.overlay-nombres {
+    color: red;
+}
+/*  */
+
+
+/* Pestaña Equipo */
+#cont {
+    display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+    width: 90%;
+	max-width: 1500px;
+	margin: 40px auto;
+}
+
+.objetos {
+   width: 100%;
+   background: rgb(202, 26, 26);
+}
+
+.objetos h1, .items h1, .items p {
+    text-align: center;
+}
+
+.imagen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagen:hover {
+    filter: brightness(1.5);
+}
+
+#cont2 {
+    display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+    width: 90%;
+	max-width: 1500px;
+	margin: 40px auto;
+}
+
+.items {
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.weapons {
+    background: rgb(180,58,175);
+    background: linear-gradient(90deg, rgba(180,58,175,1) 0%, rgba(253,43,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+.weapons:hover {
+    filter: brightness(.8);
+}
+
+table {
+    border: 2px solid #000000;
+    background-color: #4A4A4A;
+    width: 90%;
+    height: 50px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 5px auto 0 auto;
+}
+
+tbody td {
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #888888;
+  }
+/*  */
+
+/* Pestaña comunidad */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cont-comunidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    left: 5%;
+}
+
+.caja-comunidad {
+    width: 45%;
+    margin: 15px;
+
+    text-align: center;
+    height: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.caja2-comunidad {
+    width: 45%;
+    margin: 15px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.formulario-comunidad {
+    width: 60%;
+    margin: 0 20px 20px 20px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+label {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+input {
+    width: 80%;
+    padding: 4px;
+}
+
+.icono {
+    font-size: 80px;
+    margin: 30px;
+}
+
+.wasap {
+    color: rgb(40, 209, 70);
+}
+
+.insta {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to top right, rgb(254, 211, 114), rgb(248, 111, 47), rgb(212, 48, 137), rgb(158, 55, 184), rgb(95, 75, 198));
+}
+
+.twit {
+    color: rgb(29, 161, 242);
+}
+
+.disco {
+    color: rgb(135, 33, 230);
+}
+
+/* icono estrella */
+.fa-solid {
+    color: #FFD700;
+}

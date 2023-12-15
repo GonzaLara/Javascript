@@ -4,22 +4,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./imagenes/gremio.png" type="image/x-icon">
-    <title>Alerta</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="./imagenes/monstruo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <title>Monstruos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Libreria Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Libreria Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body id="indice">
+<body>
+    <header id="ir">
+        <a href="equipo.html" class="inicio">EQUIPO</a>
+    </header>
+
     <main>
-        <section id="seccion">
-            <div>
-                <h1 class="tittle">No mas pokemones</h1>
-                <p class="parrafo">Han evolucionado en monstruos muy peligrosos que atacan constantemente la civilizacion.</p>
-                <p class="parrafo">Tu deber es cazarlos para traer la paz nuevamente al mundo.</p>
-                <a href="monstruos.html" class="boton">VER MONSTRUOS</a>
+        <div class="background-container"></div>
+        <section id="contenedor">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/velocidrome.png" alt="velocidrome">
+                        </div>
+                        <h1>Velocidrome</h1>
+                        <button onclick="Overlay(1)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(1)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
             </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/daimyio.webp" class="daimyio" alt="daimyio hermitaur">
+                        </div>
+                        <h1>Daimyio Hermitaur</h1>
+                        <button onclick="Overlay(2)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(2)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/ceanataur.webp" class="ceanataur" alt="shogun ceanataur">
+                        </div>
+                        <h1>Shogun Ceanataur</h1>
+                        <button onclick="Overlay(3)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(3)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/lagiacrus.webp" class="lagiacrus" alt="lagiacrus">
+                        </div>
+                        <h1>Lagiacrus</h1>
+                        <button onclick="Overlay(4)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(4)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/lagiacrusMarmoreo.webp" class="marmoreo" alt="lagiacrus marmoreo">
+                        </div>
+                        <h1>Lagiacrus Marmoreo</h1>
+                        <button onclick="Overlay(5)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(5)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/lagiacrusAbismo.webp" class="abismo" alt="lagiacrus abisal">
+                        </div>
+                        <h1>Lagiacrus Abisal</h1>
+                        <button onclick="Overlay(6)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(6)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/rathian.webp" class="rathian" alt="rathian">
+                        </div>
+                        <h1>Rathian</h1>
+                        <button onclick="Overlay(7)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(7)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/rathianRosa.webp" class="rosa" alt="rathian rosa">
+                        </div>
+                        <h1>Rathian Rosa</h1>
+                        <button onclick="Overlay(8)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(8)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/rathianDorada.png" class="dorada" alt="rathian dorada">
+                        </div>
+                        <h1>Rathian Dorada</h1>
+                        <button onclick="Overlay(9)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(9)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/rathalos.webp" class="rathalos" alt="rathalos">
+                        </div>
+                        <h1>Rathalos</h1>
+                        <button onclick="Overlay(10)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(10)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/rathalosCeleste.webp" class="celeste" alt="rathalos celeste">
+                        </div>
+                        <h1>Rathalos Celeste</h1>
+                        <button onclick="Overlay(11)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(11)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/rathalosPlateado.webp" class="plateado" alt="rathalos plateado">
+                        </div>
+                        <h1>Rathalos Plateado</h1>
+                        <button onclick="Overlay(12)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(12)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/brachydios.webp" class="brachydios" alt="brachydios">
+                        </div>
+                        <h1>Brachydios</h1>
+                        <button onclick="Overlay(13)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(13)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/brachydiosColerico.webp" alt="brachydios colerico">
+                        </div>
+                        <h1>Brachydios Colerico</h1>
+                        <button onclick="Overlay(14)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(14)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/gravios.webp" class="gravios" alt="gravios">
+                        </div>
+                        <h1>Gravios</h1>
+                        <button onclick="Overlay(15)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(15)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/graviosNegro.webp" alt="gravios negro">
+                        </div>
+                        <h1>Gravios Negro</h1>
+                        <button onclick="Overlay(16)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(16)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/bazelgeuse.webp" alt="bazelgeuse">
+                        </div>
+                        <h1>Bazelgeuse</h1>
+                        <button onclick="Overlay(17)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(17)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/bazelgeuseMagma.webp" class="magma" alt="bazelgeuse magma">
+                        </div>
+                        <h1>Bazelgeuse Magma</h1>
+                        <button onclick="Overlay(18)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(18)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/gore.png" class="gore" alt="">
+                        </div>
+                        <h1>Gore Magala</h1>
+                        <button onclick="Overlay(19)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(19)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/goreCaotico.webp" class="caotico" alt="">
+                        </div>
+                        <h1>Gore Magala Caotico</h1>
+                        <button onclick="Overlay(20)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(20)" class="boton">Contrato de Caza</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="color">
+                            <img src="imagenes/shagaru.webp" class="shagaru" alt="">
+                        </div>
+                        <h1>Shagaru Magala</h1>
+                        <button onclick="Overlay(21)" class="boton">Informacion Monstruo</button>
+                        <button onclick="Overlay2(21)" class="boton">Contrato de Caza</button>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Overlays -->
+            <div class="overlay" id="overlay" onclick="Overlay()">
+                <div class="modal" id="modal">
+                    <p id="nombreMonstruo" class="parrafo parrafo-titulo"></p>
+                    <p id="habitatMonstruo" class="parrafo"></p>
+                    <p id="tipoMonstruo" class="parrafo"></p>
+                    <p id="descripcionMonstruo" class="parrafo"></p>
+                    <p id="amenazaMonstruo" class="parrafo" style="padding-bottom: 35px;"></p>
+                </div>
+            </div>
+
+            <div class="overlay2" id="overlay2" onclick="Overlay2()">
+                <div class="modal" id="modal">
+                    <img id="imagenMision" src="">
+                    <p id="objetivoMision" class="parrafo"></p>
+                    <p id="recompensaMision" class="parrafo"></p>
+                    <p id="costoMision" class="parrafo"></p>
+                    <p id="ubicacionMision" class="parrafo"></p>
+                </div>
+            </div>
+
         </section>
     </main>
+
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="javascript/librerias.js"></script>
+    <script src="javascript/monstruos.js"></script>
 </body>
 
 </html>

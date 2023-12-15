@@ -1,84 +1,66 @@
-function almacenarLocalStorage() {
-    localStorage.setItem('inventario', JSON.stringify(objetosInventario));
-}
+// Para cargar los objetos desde el JSON local
+const cargarObjetos = async () => {
+    try {
+        const respuesta = await fetch('./javascript/equipo.json');
+        if (respuesta.status === 200) {
+            const dato = await respuesta.json();
 
-function mostrarInventario() {
-    inventario.innerHTML = '';
-
-    for (const objeto in objetosInventario) {
-        if (objetosInventario[objeto] > 0) {
-            const nuevoElemento = document.createElement('div');
-            nuevoElemento.innerHTML = `<span class="letras"> <strong>${objeto}</strong>: <span>${objetosInventario[objeto]}`;
-            inventario.appendChild(nuevoElemento);
+            let objetos = '';
+            dato.arrayObjetos.forEach(objeto => {
+                objetos += `
+                <div class="items">
+                    <img class="imagen" src="${objeto.imagen}">
+                    <h1>${objeto.nombre}</h1>
+                    <p>${objeto.descripcion}</p>
+                    <table>
+                    <tbody>
+                    <tr>
+                    <td>Rareza</td>
+                    <td>Cantidad</td>
+                    <td>Compra</td>
+                    <td>Venta</td>
+                    </tr>
+                    <tr>
+                    <td>${objeto.rareza}</td>
+                    <td>${objeto.cantidad}</td>
+                    <td>${objeto.precio}</td>
+                    <td>${objeto.venta}</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+                `
+            });
+            document.getElementById("cont").innerHTML = objetos;
         }
+    } catch (error) {
+        console.error(error);
     }
 }
 
-function agregarObjeto(event) {
-    event.preventDefault();
-    const elemento = event.target.parentNode;
-    const nombreObjeto = elemento.querySelector('h2').textContent;
+// Para cargar las armas desde el JSON local
+const cargarArmas = async () => {
+    try {
+        const respuesta = await fetch('./javascript/equipo.json');
+        if (respuesta.status === 200) {
+            const dato = await respuesta.json();
 
-    if (objetosInventario[nombreObjeto] && objetosInventario[nombreObjeto] >= limiteObjetos[nombreObjeto]) {
-        alert(`No se puede llevar mas ${nombreObjeto}`);
-        return;
+            let armas = '';
+            dato.arrayArmas.forEach(arma => {
+                armas += `
+                <div class="items weapons">
+                    <img class="imagen" src="${arma.imagen}">
+                    <h1>${arma.nombre}</h1>
+                    <p>${arma.descripcion}</p>
+                </div>
+                `
+            });
+            document.getElementById("cont2").innerHTML = armas;
+        }
+    } catch (error) {
+        console.error(error);
     }
-
-    if (objetosInventario[nombreObjeto]) {
-        objetosInventario[nombreObjeto]++;
-    } else {
-        objetosInventario[nombreObjeto] = 1;
-    }
-
-    mostrarInventario();
-    almacenarLocalStorage();
 }
 
-function quitarObjeto(event) {
-    event.preventDefault();
-    const elemento = event.target.parentNode;
-    const nombreObjeto = elemento.querySelector('h2').textContent;
-
-    if (objetosInventario[nombreObjeto] && objetosInventario[nombreObjeto] > 0) {
-        objetosInventario[nombreObjeto]--;
-    }
-
-    mostrarInventario();
-    almacenarLocalStorage();
-}
-
-
-const items = document.querySelectorAll('.cont');
-const inventario = document.getElementById('inventario-items');
-
-const guardarInventario = localStorage.getItem('inventario');
-const objetosInventario = guardarInventario ? JSON.parse(guardarInventario) : {};
-
-const limiteObjetos = {
-    'Pocion': 10,
-    'Pocion Maxima': 3,
-    'Piedra de Afilar': 20,
-    'Bolas de Pintura': 99,
-    'Trampa Electrica': 1,
-    'Trampa Enredaderas': 1,
-    'Bomba Tranquil.': 8,
-    'Bomba Flash': 5,
-    'Bomba Sonica': 5,
-    'Bebida Caliente': 5,
-    'Bebida Fria': 5,
-    'Antidoto': 10,
-    'Bebida Energetica': 10,
-    'Bomba de Humo': 4,
-    'Megabomba de Barril': 2,
-    'Prismaticos': 1,
-};
-
-items.forEach((item) => {
-    const botonAgregar = item.querySelector('.agregar');
-    const botonQuitar = item.querySelector('.quitar');
-
-    botonAgregar.addEventListener('click', agregarObjeto);
-    botonQuitar.addEventListener('click', quitarObjeto);
-});
-
-mostrarInventario();
+cargarObjetos();
+cargarArmas();

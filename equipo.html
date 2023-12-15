@@ -4,139 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./imagenes/espada.png" type="image/x-icon">
-    <title>Equipamento</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="./imagenes/monstruo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <title>Monstruos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Libreria Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Libreria Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body id="equipo">
-    <header>
-        <a href="monstruos.html" class="volver">VOLVER</a>
+<body>
+    <header id="medio">
+        <a href="index.html" class="inicio">INICIO</a>
+        <a href="comunidad.html" class="inicio">COMUNIDAD</a>
     </header>
     <main>
-        <section id="contenedor-grid">
-            <div class="cont0">
-                <h2>OBJETOS</h2>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/pocion.png" alt="">
-                <h2>Pocion</h2>
-                <p>Restablece moderadamente el nivel de salud.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/pocionmaxima.png" alt="">
-                <h2>Pocion Maxima</h2>
-                <p>Restablece la salud al maximo.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/afilar.png" alt="">
-                <h2>Piedra de Afilar</h2>
-                <p>Para pulir las armas y restablecer su afilado.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/pintura.png" alt="">
-                <h2>Bola de Pintura</h2>
-                <p>Para marcar monstruos grandes y seguir su rastro durante varios minutos.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/electrica.png" alt="">
-                <h2>Trampa Electrica</h2>
-                <p>Inmoviliza al monstruo que entre en contacto. Util para capturar monstruos.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/enredadera.png" alt="">
-                <h2>Trampa Enredaderas</h2>
-                <p>Se acciona con un gran peso. Inmoviliza por un tiempo a ciertos monstruos.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/tranquilizadora.png" alt="">
-                <h2>Bomba Tranquil.</h2>
-                <p>Para capturar a monstruos debilitados e inmovilizados por una trampa.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/flash.png" alt="">
-                <h2>Bomba Flash</h2>
-                <p>Bomba que brilla con fuerza al impactar. Para cegar monstruos.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/sonica.png" alt="">
-                <h2>Bomba Sonica</h2>
-                <p>Bomba que emite un aspero sonido de alta frecuencia y detiene a monstruos sensibles.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/caliente.png" alt="">
-                <h2>Bebida Caliente</h2>
-                <p>Otorga resistencia temporal al frio extremo.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/fria.png" alt="">
-                <h2>Bebida Fria</h2>
-                <p>Otorga resistencia temporal al calor extremo.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/antidoto.png" alt="">
-                <h2>Antidoto</h2>
-                <p>Cura el veneno.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items alinear2" src="imagenes/energia.png" alt="">
-                <h2>Bebida Energetica</h2>
-                <p>Aumenta la resistencia y tambien ayuda a quitar el sueño causado por monstruos.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items alinear" src="imagenes/humo.png" alt="">
-                <h2>Bomba de Humo</h2>
-                <p>Crea una gran nube de humo en la zona donde cae. Util para escapar.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/barril.png" alt="">
-                <h2>Megabomba de Barril</h2>
-                <p>Bomba de barril grande mejorada. Eficaz contra monstruos grandes.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont">
-                <img class="items" src="imagenes/prismaticos.png" alt="">
-                <h2>Prismatico</h2>
-                <p>Permite observar desde lejos.</p>
-                <a href="#" class="quitar">Quitar</a>
-                <a href="#" class="agregar">Agregar</a>
-            </div>
-            <div class="cont2">
-                <h2 style="padding-top: 10px;">INVENTARIO</h2>
-                <div id="inventario-items">
+        <div class="background-container"></div>
 
-                </div>
-            </div>
-        </section>  
+        <div class="objetos">
+            <h1>OBJETOS</h1>
+        </div>
+
+        <section id="cont">
+        </section>
+
+        <div class="objetos">
+            <h1>ARMAS</h1>
+        </div>
+
+        <section id="cont2">
+        </section>
+
+        
     </main>
 
     <footer></footer>
