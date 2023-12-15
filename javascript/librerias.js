@@ -1,28 +1,35 @@
 // Para el mensaje de bienvenida con Sweet Alert
 document.addEventListener('DOMContentLoaded', function () {
-    const mensajeMostrado = sessionStorage.getItem('mensajeMostrado');
+    const hasShownMessage = sessionStorage.getItem('hasShownMessage');
 
-    if (mensajeMostrado === null) {
-        const guardarNombre = localStorage.getItem('nombreUsuario');
-        if (guardarNombre) {
+    if (!hasShownMessage) {
+        const storedName = localStorage.getItem('userName');
+        if (storedName) {
             Swal.fire({
-                title: `¡Que bueno volver a verte, ${guardarNombre}!`,
-                text: 'Espero que estés listo para cazar monstruos.',
+                title: `Que bueno volver a verte, ${storedName}`,
+                text: `Espero que estes listo para cazar monstruos`,
                 icon: 'success'
             });
-            sessionStorage.setItem('mensajeMostrado', 'true');
+            sessionStorage.setItem('hasShownMessage', 'true');
         } else {
             Swal.fire({
-                title: 'Bienvenido Cazador',
-                text: 'Decime tu nombre para registrarte.',
+                title: 'Bienvenido cazador',
+                text: 'Decime tu nombre para registrarte en el gremio',
                 input: 'text',
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
                 cancelButtonText: 'Cancelar',
-            }).then((resultado) => {
-                if (resultado.isConfirmed) {
-                    const userName = resultado.value;
-                    localStorage.setItem('nombreUsuario', userName);
+                preConfirm: (name) => {
+                    if (!name) {
+                        Swal.showValidationMessage('Como te voy a registrar sin un nombre.');
+                    } else {
+                        localStorage.setItem('userName', name);
+                        Swal.fire({
+                            title: `¡Bienvenido a bordo, ${name}!`,
+                            icon: 'success'
+                        });
+                        sessionStorage.setItem('hasShownMessage', 'true');
+                    }
                 }
             });
         }
@@ -30,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Para el carrusel con Swiper en el index
+
+// Para el carrusel con Swiper
 const swiper = new Swiper('.swiper', {
     effect: 'cube',
     grabCursor: true,
