@@ -9,7 +9,7 @@ class Monstruo {
 }
 
 const monstruos = [
-    new Monstruo("VELOCIDROME", "Bosques y Colinas/Jungla/Vergel Eterno", "Wyvern Pajaro", "", "Amenaza: <i class='fa-solid fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i>"),
+    new Monstruo("VELOCIDROME", "Bosques y Colinas/Jungla/Vergel Eterno", "Wyvern Pajaro", "El Velocidrome es el monstruo alfa que lidera las manadas de Velociprey. Mas grandes que que estos y de cresta mas prominente, los Velocidrome usas sus fuertes patas traseras para saltar sobre su presa, inmoovilizandola y llamando al resto de la manada para que lo ayude.", "Amenaza: <i class='fa-solid fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i>"),
     new Monstruo("DAIMYO HERMITAUR", "Desierto/Jungla/Bosque Inundado", "Carapaceon", "El Daimyio Hermitaur es un  gran cangrejo de caparazón rojo con rayas blancas en su coraza y grandes pinzas en forma de escudo. Su abdomen está protegido por un gran cráneo de Monoblos. Atacara principalmente con sus enormes pinzas. Ademas puede disparar potentes chorros de agua o cargar velozmente hacia su presa.", "Amenaza: <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i>"),
     new Monstruo("SHOGUN CEANATAUR", "Volcan, Pantano, Bosque Inundado", "Carapaceon", "El Shogun Ceanataur posee un exoesqueleto azul con numerosas partes dentadas y aserradas que suele estar protegido por el craneo de un Gravios. Utilizara sus grandes pinzas en forma de hoz, que inicialmente se encuentran plegadas, pero que se extienden cuando se enfada para cortar a cualquiera que se acerque.", "Amenaza: <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i>"),
     new Monstruo("LAGIACRUS", "Bosque Inundado/Picos/Jungla", "Leviatan", "El Lagiacrus tiene un cuerpo alargado, de caracteristico color azul con vientre claro. Es capaz de generar una gran cantidad de electricidad en su espina dorsal que usa para generar escudos electricos y explosiones de rayos. Trata de llevar a su presa al agua donde se convierte en una amenaza mucho mayor.", "Amenaza: <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-solid fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i> <i class='fa-regular fa-star'></i>"),
@@ -49,9 +49,9 @@ const contratos = [
     new Contrato("./imagenes/iconoLagiacrus.png", "Caza 1 Lagiacrus", "3500p", "350p", "Picos"),
     new Contrato("./imagenes/iconoLagiacrusMarmoreo.png", "Caza 1 Lagiacrus Marmoreo", "4000p", "400p", "Isla Desierta"),
     new Contrato("./imagenes/iconoLagiacrusAbismo.png", "Caza 1 Lagiacrus Abisal", "5000p", "500p", "Ruina Submarina"),
-    new Contrato("./imagenes/iconoRahian.png", "Caza 1 Rathian", "3000p", "300p", "Templo Olvidado"),
-    new Contrato("./imagenes/iconoRahianRosa.png", "Caza 1 Rathian Rosa", "3500p", "350p", "Yermo de Agujas"),
-    new Contrato("./imagenes/iconoRahianDorada.png", "Caza 1 Rathian Dorada", "8000p", "800p", "Arena Forlorn"),
+    new Contrato("./imagenes/iconoRathian.png", "Caza 1 Rathian", "3000p", "300p", "Templo Olvidado"),
+    new Contrato("./imagenes/iconoRathianRosa.png", "Caza 1 Rathian Rosa", "3500p", "350p", "Yermo de Agujas"),
+    new Contrato("./imagenes/iconoRathianDorada.png", "Caza 1 Rathian Dorada", "8000p", "800p", "Arena Forlorn"),
     new Contrato("./imagenes/iconoRathalos.png", "Caza 1 Rathalos", "4500p", "450p", "Estepa Otoñal"),
     new Contrato("./imagenes/iconoRathalosCeleste.png", "Caza 1 Rathalos Celeste", "5000p", "500p", "Monte Cielo"),
     new Contrato("./imagenes/iconoRathalosPlateado.png", "Caza 1 Rathalos Plateado", "8000p", "800p", "Lecho de los Ancianos"),
@@ -62,8 +62,8 @@ const contratos = [
     new Contrato("./imagenes/iconoBazelgeuse.png", "Caza 1 Bazelgeuse", "7700p", "770p", "Lecho de los Ancianos"),
     new Contrato("./imagenes/iconoBazelgeuseMagma.png", "Caza 1 Bazelgeuse Magma", "9900p", "990p", ""),
     new Contrato("./imagenes/iconoGore.png", "Caza 1 Gore Magala", "7200p", "720p", "Vergel Eterno"),
-    new Contrato("./imagenes/iconoCaotico", "Caza 1 Gore Magala Caotico", "12000p", "1200p", "Bastion"),
-    new Contrato("./imagenes/iconoShagaru", "Abate 1 Shagaru Magala", "15000p", "1500p", "Zona Sagrada")
+    new Contrato("./imagenes/iconoCaotico.png", "Caza 1 Gore Magala Caotico", "12000p", "1200p", "Bastion"),
+    new Contrato("./imagenes/iconoShagaru.png", "Abate 1 Shagaru Magala", "15000p", "1500p", "Zona Sagrada")
 ];
 
 let overlayAbierto = false;
