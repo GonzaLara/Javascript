@@ -5,7 +5,7 @@ const telefono = document.getElementById("telefono");
 const email = document.getElementById("email");
 const mensaje = document.getElementById("mensaje");
 
-function sendEmail() {
+function enviarEmail() {
     const cuerpoMensaje = `Nombre: ${nombre.value}<br>Apellido: ${apellido.value}<br>
     Telefono: ${telefono.value}<br>Email: ${email.value}<br>Mensaje: ${mensaje.value}`;
 
@@ -41,7 +41,7 @@ form.addEventListener("submit", (e) => {
     if (!nombre.classList.contains("error") && !apellido.classList.contains("error") && !telefono.classList.contains("error") &&
         validarEmail(email.value) && !mensaje.classList.contains("error")) {
 
-        sendEmail();
+        enviarEmail();
         form.reset();
         return false;
     } else {

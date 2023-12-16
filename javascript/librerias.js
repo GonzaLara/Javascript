@@ -1,16 +1,16 @@
 // Para el mensaje de bienvenida con Sweet Alert
 document.addEventListener('DOMContentLoaded', function () {
-    const hasShownMessage = sessionStorage.getItem('hasShownMessage');
+    const mensaje = sessionStorage.getItem('mensaje');
 
-    if (!hasShownMessage) {
-        const storedName = localStorage.getItem('userName');
-        if (storedName) {
+    if (!mensaje) {
+        const nombreGuardado = localStorage.getItem('userName');
+        if (nombreGuardado) {
             Swal.fire({
-                title: `Que bueno volver a verte, ${storedName}`,
+                title: `Que bueno volver a verte, ${nombreGuardado}`,
                 text: `Espero que estes listo para cazar monstruos`,
                 icon: 'success'
             });
-            sessionStorage.setItem('hasShownMessage', 'true');
+            sessionStorage.setItem('mensaje', 'true');
         } else {
             Swal.fire({
                 title: 'Bienvenido cazador',
@@ -19,16 +19,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
                 cancelButtonText: 'Cancelar',
-                preConfirm: (name) => {
-                    if (!name) {
+                preConfirm: (nombre) => {
+                    if (!nombre) {
                         Swal.showValidationMessage('Como te voy a registrar sin un nombre.');
                     } else {
-                        localStorage.setItem('userName', name);
+                        localStorage.setItem('userName', nombre);
                         Swal.fire({
-                            title: `¡Bienvenido a bordo, ${name}!`,
+                            title: `¡Bienvenido a bordo, ${nombre}!`,
                             icon: 'success'
                         });
-                        sessionStorage.setItem('hasShownMessage', 'true');
+                        sessionStorage.setItem('mensaje', 'true');
                     }
                 }
             });
