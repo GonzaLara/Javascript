@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
             sessionStorage.setItem('mensaje', 'true');
         } else {
             Swal.fire({
-                title: 'Bienvenido cazador',
-                text: 'Decime tu nombre para registrarte en el gremio',
+                title: 'Bienvenido',
+                text: 'Aca vas a poder ver informacion sobre varios monstruos .Decime tu nombre para registrarte en el gremio de cazadores',
                 input: 'text',
                 showCancelButton: true,
                 confirmButtonText: 'Guardar',
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else {
                         localStorage.setItem('userName', nombre);
                         Swal.fire({
-                            title: `¡Bienvenido a bordo, ${nombre}!`,
+                            title: `¡Bienvenido a bordo, cazador ${nombre}!`,
                             icon: 'success'
                         });
                         sessionStorage.setItem('mensaje', 'true');

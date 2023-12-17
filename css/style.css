@@ -121,7 +121,7 @@ img {
 .boton {
     display: inline;
     width: 80%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-weight: bold;
     font-size: 1.2rem;
     border-radius: 15px;
@@ -133,24 +133,16 @@ img {
 }
 
 /* tamaño imagenes monstruos */
-.malfestio {
-    width: 60%;
-}
-
-.nebula {
-    width: 40%;
-}
-
 .ceanataur, .rosa {
     width: 80%;
 }
 
 .daimyio {
-    width: 65%;
+    width: 67%;
 }
 
 .lagiacrus {
-    width: 75%;
+    width: 77%;
 }
 
 .marmoreo {
@@ -187,6 +179,10 @@ img {
 
 .gravios {
     width: 85%;
+}
+
+.bazel {
+    width: 99%;
 }
 
 .gore {
